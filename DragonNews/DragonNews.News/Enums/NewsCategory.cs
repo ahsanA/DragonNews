@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DragonNews.News.Enums
+namespace DragonNews.News
 {
     public enum NewsCategory
     {

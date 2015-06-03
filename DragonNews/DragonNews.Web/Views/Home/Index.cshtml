@@ -7,7 +7,7 @@
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create New", "Create", "News")
 </p>
 <table class="table">
     <tr>
@@ -23,15 +23,14 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.Category)
+           @{var category = (DragonNews.News.NewsCategory)item.Category;}
+            @category
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Details)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            @Html.ActionLink("Details", "Details", "News", new { id = item.Id },null)
         </td>
     </tr>
 }

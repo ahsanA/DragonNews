@@ -21,7 +21,7 @@ namespace DragonNews.Web.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            var newsModel = new NewsViewModel(_newsService);
+            var newsModel = new NewsViewModel();
             return View(newsModel.GetAllNews());
         }
     }

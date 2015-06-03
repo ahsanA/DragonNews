@@ -4,8 +4,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using DragonNews.News;
 using AutoMapper;
+using DragonNews.Web.App_Start;
 
 namespace DragonNews.Web.Models
 {
@@ -25,6 +25,11 @@ namespace DragonNews.Web.Models
             _newsService = newsService;
         }
 
+        public NewsViewModel()
+        {
+            _newsService = NinjectWebCommon.GetConcreteInstance<INewsService>(); ;
+        }
+
         public void Add()
         {
             try
@@ -33,7 +38,7 @@ namespace DragonNews.Web.Models
                 Mapper.CreateMap<NewsViewModel, News.News>();
                 news = Mapper.Map<NewsViewModel, News.News>(this);
                 news.CreateDate = DateTime.UtcNow;
-                news.ID = new Guid();
+                news.ID = Guid.NewGuid();
                 news.UserID = new Guid("3F2504E0-4F89-41D3-9A0C-0305E82C3301");
                 _newsService.AddNews(news);
             }
@@ -48,7 +53,7 @@ namespace DragonNews.Web.Models
         {
             var news = _newsService.DetailNews(Id);
 
-            var newsModel = new NewsViewModel(_newsService);
+            var newsModel = new NewsViewModel();
             Mapper.CreateMap<News.News, NewsViewModel>();
             newsModel = Mapper.Map<News.News, NewsViewModel>(news);
 
@@ -83,7 +88,7 @@ namespace DragonNews.Web.Models
             Mapper.CreateMap<News.News, NewsViewModel>();
             foreach (var news in allNews)
             {
-                var newsModel = new NewsViewModel(_newsService);
+                var newsModel = new NewsViewModel();
                 newsModel = Mapper.Map<News.News, NewsViewModel>(news);
                 allNewsModel.Add(newsModel);
             }
