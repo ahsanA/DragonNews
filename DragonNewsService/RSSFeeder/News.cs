@@ -42,5 +42,11 @@ namespace RSSFeeder
             feed.Items = items;
             return new Rss20FeedFormatter(feed);
         }
+
+
+        public IEnumerable<DragonNews.News.News> Rest(string category)
+        {
+            return _service.GetAllNewsAccordingToCategory(category);
+        }
     }
 }

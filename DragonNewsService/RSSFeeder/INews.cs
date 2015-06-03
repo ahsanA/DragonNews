@@ -16,6 +16,8 @@ namespace RSSFeeder
         [OperationContract]
         [WebGet(UriTemplate = "rss?category={category}")]
         Rss20FeedFormatter Rss(string category);
+        [WebInvoke(Method="GET", ResponseFormat = WebMessageFormat.Json, UriTemplate= "rest/category/{category}")]
+        IEnumerable<DragonNews.News.News> Rest(string category);
     }
 
 }
