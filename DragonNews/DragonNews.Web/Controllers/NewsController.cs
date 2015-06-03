@@ -8,6 +8,10 @@ namespace DragonNews.Web.Controllers
 {
     public class NewsController : Controller
     {
+        public NewsController() 
+        {
+ 
+        }
         // GET: News
         public ActionResult Index()
         {

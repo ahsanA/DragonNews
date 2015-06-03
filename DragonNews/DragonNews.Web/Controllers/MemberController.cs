@@ -9,7 +9,17 @@ namespace DragonNews.Web.Controllers
     public class MemberController : Controller
     {
         // GET: Member
-        public ActionResult Index()
+        public ActionResult SignUp() 
+        {
+            return View();
+        }
+
+        public ActionResult SignIn()
+        {
+            return View();
+        }
+
+        public ActionResult SignOut()
         {
             return View();
         }

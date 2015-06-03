@@ -10,6 +10,9 @@ namespace DragonNews.Web.App_Start
 
     using Ninject;
     using Ninject.Web.Common;
+    using Ninject.Modules;
+    using DragonNews.News;
+    using DragonNews.Member;
 
     public static class NinjectWebCommon 
     {
@@ -32,26 +35,30 @@ namespace DragonNews.Web.App_Start
         {
             bootstrapper.ShutDown();
         }
-        
+
         /// <summary>
         /// Creates the kernel that will manage your application.
         /// </summary>
         /// <returns>The created kernel.</returns>
         private static IKernel CreateKernel()
         {
-            var kernel = new StandardKernel();
-            try
-            {
-                kernel.Bind<Func<IKernel>>().ToMethod(ctx => () => new Bootstrapper().Kernel);
-                kernel.Bind<IHttpModule>().To<HttpApplicationInitializationHttpModule>();
+            return Container;
+        }
 
-                RegisterServices(kernel);
-                return kernel;
-            }
-            catch
+        static IKernel _container;
+        private static IKernel Container
+        {
+            get
             {
-                kernel.Dispose();
-                throw;
+                if (_container == null)
+                {
+                    _container = new StandardKernel();
+                    _container.Bind<Func<IKernel>>().ToMethod(ctx => () => new Bootstrapper().Kernel);
+                    _container.Bind<IHttpModule>().To<HttpApplicationInitializationHttpModule>();
+
+                    RegisterServices(_container);
+                }
+                return _container;
             }
         }
 
@@ -61,6 +68,24 @@ namespace DragonNews.Web.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
-        }        
+            kernel.Load(new INinjectModule[]
+            {
+                new NewsModule(),
+                new MemberModule()
+            });
+        }
+
+        /// <summary>
+        /// Creates concrete class instace
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <returns></returns>
+        public static T GetConcreteInstance<T>()
+        {
+            object instance = Container.TryGet<T>();
+            if (instance != null)
+                return (T)instance;
+            throw new InvalidOperationException(string.Format("Unable to create an instance of {0}", typeof(T).FullName));
+        }     
     }
 }
