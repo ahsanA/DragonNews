@@ -51,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Enums\NewsCategory.cs" />
     <Compile Include="News.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

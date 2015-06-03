@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Ninject;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,29 +9,39 @@ namespace DragonNews.News
 {
     class NewsService:INewsService
     {
+        INewsRepository _newsRepository;
+
+        [Inject]
+        public NewsService(INewsRepository newsRepository)
+        {
+            _newsRepository = newsRepository;
+        }
         public void AddNews(News news)
         {
-            throw new NotImplementedException();
+            _newsRepository.AddNews(news);
+            _newsRepository.Save();
         }
 
         public void EditNews(News news)
         {
-            throw new NotImplementedException();
+            _newsRepository.EditNews(news);
+            _newsRepository.Save();
         }
 
         public News DetailNews(Guid id)
         {
-            throw new NotImplementedException();
+            return _newsRepository.DetailNews(id);
         }
 
         public void DeleteNews(Guid id)
         {
-            throw new NotImplementedException();
+            _newsRepository.DeleteNews(id);
+            _newsRepository.Save();
         }
 
         public List<News> GetAllNews()
         {
-            throw new NotImplementedException();
+            return _newsRepository.GetAllNews().ToList();
         }
     }
 }
