@@ -1,4 +1,5 @@
 ﻿using DragonNews.News;
+using Ninject;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +13,7 @@ namespace DragonNewsService.RSS
     {
         INewsService _service;
 
+        [Inject]
         public News(INewsService service)
         {
             _service = service;

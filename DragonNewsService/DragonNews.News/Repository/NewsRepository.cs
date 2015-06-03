@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 
 namespace DragonNews.News
 {
-    class NewsRepository : INewsRepository
+    public class NewsRepository : INewsRepository
     {
 
         private DragonNewsEntities context;
 
-        public NewsRepository(DragonNewsEntities context)
+        public NewsRepository()
         {
-            this.context = context;
+            this.context = new DragonNewsEntities();
         }
 
         public void AddNews(News news)
