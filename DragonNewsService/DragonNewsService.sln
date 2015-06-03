@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragonNewsService.RSS", "Dr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragonNews.News", "DragonNews.News\DragonNews.News.csproj", "{B1AFB155-EA02-422F-894D-C34A174EEC9C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewServiceHostServer", "NewServiceHostServer\NewServiceHostServer.csproj", "{0CF1FEDE-814E-4C59-BFBD-5B15BD713F53}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{B1AFB155-EA02-422F-894D-C34A174EEC9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B1AFB155-EA02-422F-894D-C34A174EEC9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B1AFB155-EA02-422F-894D-C34A174EEC9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CF1FEDE-814E-4C59-BFBD-5B15BD713F53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CF1FEDE-814E-4C59-BFBD-5B15BD713F53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CF1FEDE-814E-4C59-BFBD-5B15BD713F53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CF1FEDE-814E-4C59-BFBD-5B15BD713F53}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

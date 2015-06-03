@@ -11,6 +11,7 @@ namespace DragonNewsService.RSS
     public class News:INews
     {
         INewsService _service;
+
         public News(INewsService service)
         {
             _service = service;
