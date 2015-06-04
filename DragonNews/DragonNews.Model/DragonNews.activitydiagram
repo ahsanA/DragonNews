@@ -1,1 +1,136 @@
-﻿ 
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="58784197-bed2-46b9-a96d-aaeb6bb791ca" name="DragonNews" linkedPackageId="2757d136-888e-4b8f-86e3-e473bb8d4224" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="843993fd-ea0c-4846-ae24-bb1f78b5969a">
+      <profileInstance Id="fad2f548-f7cb-4820-b11c-f25a66b90b6b" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="dc9a1713-9745-43cf-b3c7-d872274cefcf">
+      <profileInstance Id="3801e6ed-88dc-42da-938b-271506b2c465" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="41d66941-e4a4-48bd-9823-3caccc67aee1" name="DragonNews" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="80a39479-46d3-4b17-b3b0-3914375ef216" />
+        <nodes>
+          <initialNode Id="18c2af83-75ee-44ef-bc7a-1ea8a3483c68" name="Initial1" isLeaf="false">
+            <elementDefinition Id="2a2e2829-0ebc-4b4f-ba0e-513e2fe22465" />
+            <flowNodeTargets>
+              <controlFlow Id="0dff7a29-2c52-42d1-9250-57c9e8fe090b" isLeaf="false">
+                <opaqueActionMoniker Id="4a8fb73d-4608-4332-a26a-95e7d13d9dff" LastKnownName="View All News" />
+                <elementDefinition Id="fde3ed03-d6fa-4776-81db-332f89aadeba" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <activityFinalNode Id="2d8ae7ba-412e-4176-949c-7f510452e6ab" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="2f83a988-4b06-438b-bf5d-7ac05e516dff" />
+          </activityFinalNode>
+          <opaqueAction Id="4a8fb73d-4608-4332-a26a-95e7d13d9dff" name="View All News" isLeaf="false">
+            <elementDefinition Id="70fffe70-99e7-4ab9-af25-edf88098d9a7" />
+            <flowNodeTargets>
+              <controlFlow Id="16cd3571-6ce7-407f-b3ea-ac8b175d2f17" isLeaf="false">
+                <opaqueActionMoniker Id="97aefd27-1967-437f-98c6-89482fe40daa" LastKnownName="View Detaid News" />
+                <elementDefinition Id="a8829af7-81d4-4375-b0a4-5534fa55e89f" />
+              </controlFlow>
+              <controlFlow Id="d5cf9808-0eb4-4c60-8162-6605a96245c6" isLeaf="false">
+                <opaqueActionMoniker Id="9c2bd634-3390-4e16-ade1-2a51eda284d0" LastKnownName="Sign In" />
+                <elementDefinition Id="6ab11d1e-4885-47bc-bd09-1a933cf17fd8" />
+              </controlFlow>
+              <controlFlow Id="de986a09-37c4-46bc-b5c0-a5a4f455782a" isLeaf="false">
+                <opaqueActionMoniker Id="1cb6919e-53ba-463b-9a07-febd925476f5" LastKnownName="Sign Up" />
+                <elementDefinition Id="48843c91-d8a9-44e8-93b3-33dc57f41691" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="97aefd27-1967-437f-98c6-89482fe40daa" name="View Detaid News" isLeaf="false">
+            <elementDefinition Id="0eb0ac8b-dad1-4e02-b14d-fd7b7a4a3e13" />
+          </opaqueAction>
+          <opaqueAction Id="9c2bd634-3390-4e16-ade1-2a51eda284d0" name="Sign In" isLeaf="false">
+            <elementDefinition Id="c8ae848a-7b3d-4bdd-a554-c02a7b3c2913" />
+            <flowNodeTargets>
+              <controlFlow Id="7a17e02a-0d81-4e78-8618-9a57ab133547" isLeaf="false">
+                <opaqueActionMoniker Id="75364233-04d4-45cc-af77-6cdb5da7de26" LastKnownName="View All News Added by the user" />
+                <elementDefinition Id="3ad89b60-38ff-48bf-9806-f5583b29d704" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="1cb6919e-53ba-463b-9a07-febd925476f5" name="Sign Up" isLeaf="false">
+            <elementDefinition Id="9e689fff-5534-4f86-9c9a-113b6b4adfbf" />
+            <flowNodeTargets>
+              <controlFlow Id="7032e07a-dccb-4081-96d8-21959b90211d" isLeaf="false">
+                <opaqueActionMoniker Id="9c2bd634-3390-4e16-ade1-2a51eda284d0" LastKnownName="Sign In" />
+                <elementDefinition Id="ee2fa2d1-9e0e-45c2-bfea-e9f2f8e80034" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="f8ef60dd-bca5-4e95-a45f-eca9321510a7" name="Add News" isLeaf="false">
+            <elementDefinition Id="2b8a4722-59ef-412e-bb3e-fadc5a6b9350" />
+            <flowNodeTargets>
+              <controlFlow Id="54ef1dfe-94a6-4158-aa14-23cd52ae61e1" isLeaf="false">
+                <opaqueActionMoniker Id="ea2babc7-ccae-47c9-84fc-e53fc221038b" LastKnownName="Sign Out" />
+                <elementDefinition Id="d7594b4a-0635-4b07-84b0-b3e2d3d9a52a" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="ca9461f8-aa01-4596-bf0e-a48c085c7c70" name="Edit News" isLeaf="false">
+            <elementDefinition Id="525445f9-10c5-4be5-9338-8726fd64bebe" />
+            <flowNodeTargets>
+              <controlFlow Id="91238b5e-2387-4a6a-b579-cfa1979bf4e8" isLeaf="false">
+                <opaqueActionMoniker Id="ea2babc7-ccae-47c9-84fc-e53fc221038b" LastKnownName="Sign Out" />
+                <elementDefinition Id="5cf9d3d8-19ca-46d7-81e2-75a311dea972" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="3f1814d0-2cb6-4e9c-95a9-72cdb9ca3654" name="Delete News" isLeaf="false">
+            <elementDefinition Id="4f9e063e-a5de-4488-a886-4851dbc76705" />
+            <flowNodeTargets>
+              <controlFlow Id="4caecbac-e194-45ff-bdd4-83dd3610707d" isLeaf="false">
+                <opaqueActionMoniker Id="ea2babc7-ccae-47c9-84fc-e53fc221038b" LastKnownName="Sign Out" />
+                <elementDefinition Id="86d7807e-792a-4a39-a2b2-fc684a0ffb25" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="75364233-04d4-45cc-af77-6cdb5da7de26" name="View All News Added by the user" isLeaf="false">
+            <elementDefinition Id="b8dba2e9-6fa6-444b-9c07-85a57dfe5ddd" />
+            <flowNodeTargets>
+              <controlFlow Id="af1bc33d-7d26-4243-b043-18aa92ba951a" isLeaf="false">
+                <opaqueActionMoniker Id="f8ef60dd-bca5-4e95-a45f-eca9321510a7" LastKnownName="Add News" />
+                <elementDefinition Id="978a1912-f225-4c26-a2e8-cac681440ee0" />
+              </controlFlow>
+              <controlFlow Id="0a5cfd9d-f8e2-46dd-a9b1-3b973b3f76fe" isLeaf="false">
+                <opaqueActionMoniker Id="ca9461f8-aa01-4596-bf0e-a48c085c7c70" LastKnownName="Edit News" />
+                <elementDefinition Id="1670cf00-2119-42dd-ba4b-f6a90bddef0b" />
+              </controlFlow>
+              <controlFlow Id="092e4ae2-2a6e-441f-8035-cfdd6ff7b29f" isLeaf="false">
+                <opaqueActionMoniker Id="3f1814d0-2cb6-4e9c-95a9-72cdb9ca3654" LastKnownName="Delete News" />
+                <elementDefinition Id="9b3543c4-0f06-4011-83fd-22d1ef17970b" />
+              </controlFlow>
+              <controlFlow Id="a3340611-bcb7-4ebc-8074-2aecabc37337" isLeaf="false">
+                <opaqueActionMoniker Id="97aefd27-1967-437f-98c6-89482fe40daa" LastKnownName="View Detaid News" />
+                <elementDefinition Id="6354fbf3-a9bd-4e1d-b0ef-f3f097cf1566" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="ea2babc7-ccae-47c9-84fc-e53fc221038b" name="Sign Out" isLeaf="false">
+            <elementDefinition Id="74dba593-6a5a-437e-a3a1-4a58c24f9de2" />
+            <flowNodeTargets>
+              <controlFlow Id="0200f514-fb89-4244-955b-62241ac1fc5b" isLeaf="false">
+                <activityFinalNodeMoniker Id="2d8ae7ba-412e-4176-949c-7f510452e6ab" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="b4667f88-65d1-46c8-b802-b0190e05cd44" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="2757d136-888e-4b8f-86e3-e473bb8d4224" name="DragonNews.Model">
+    <elementDefinition Id="75972046-b2e8-49ba-86d5-fc14214732e5" />
+  </package>
+</activityRootModel>

@@ -4,7 +4,26 @@
     ViewBag.Title = "Index";
 }
 
+
 <h2>Home</h2>
+<hr />
+<div class="row">
+    <div class="col-md-12">
+        Get Cetagorised RSS Feed:
+        @Html.DropDownList("RSS", Enum.GetValues(typeof(DragonNews.News.NewsCategory)).Cast<DragonNews.News.NewsCategory>().Select(x => new SelectListItem { Text = x.ToString(), Value = ((int)x).ToString() }))<br />
+        <a href="javascript:void(0)" id="GetRSSFeed" class="btn btn-info btn-sm">Get RSS Feed</a><br />
+    </div>
+</div>
+<hr />
+<div class="row">
+    <div class="col-md-12">
+        Get Cetagorised Rest Feed:
+        @Html.DropDownList("REST", Enum.GetValues(typeof(DragonNews.News.NewsCategory)).Cast<DragonNews.News.NewsCategory>().Select(x => new SelectListItem { Text = x.ToString(), Value = ((int)x).ToString() }))<br />
+        <a href="javascript:void(0)" id="GetRestFeed" class="btn btn-info btn-sm">Get REST Feed</a><br />
+    </div>
+</div>
+<hr />
+
  Page Size:
 <nav>   
     <ul class="pagination">
@@ -58,3 +77,21 @@ Page Number:
         }
     </ul>
 </nav>
+
+@section Scripts {
+    <script>
+        $('#GetRSSFeed').on('click', function () {
+            var dropdownText = $("#RSS option:selected").text();
+            var url = 'http://localhost:54249/news/rss?category=' + dropdownText;
+            window.open(url, '_blank');
+        });
+    </script>
+<script>
+    $('#GetRestFeed').on('click', function () {
+        var dropdownText = $("#REST option:selected").text();
+        var url = 'http://localhost:54249/news/rest/category/' + dropdownText;
+        window.open(url, '_blank');
+    });
+</script>
+
+}

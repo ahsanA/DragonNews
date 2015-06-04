@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="ae7d64d3-1630-4562-a0e2-0e0a94ce2c2e" name="Feed" linkedPackageId="45281c02-a574-49bb-9dfe-b0c73290e0c6" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="0750c82a-216f-472f-ad95-c1ba21a0f746">
+      <profileInstance Id="39540527-95eb-49fc-ab0c-3a376f482902" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="bcb381f2-06e0-4969-b13f-0377f8e58370">
+      <profileInstance Id="38857b9f-7ad3-453e-b8c0-c08daad7f987" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="5e3dd555-4884-4727-a1e3-ac712c6bfc02" name="Feed" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="1a973441-cb12-4610-9ca8-439be1321480" />
+        <nodes>
+          <initialNode Id="21e03fc6-f6bd-42a2-ab33-0b40cec11f8b" name="Initial1" isLeaf="false">
+            <elementDefinition Id="e05edc76-656c-4037-bc0b-fe6e968bb948" />
+            <flowNodeTargets>
+              <controlFlow Id="0c95d710-c4ef-413d-840c-915ae9bc046a" isLeaf="false">
+                <opaqueActionMoniker Id="6f42600b-ae46-4259-b669-ea91d16f5f61" LastKnownName="Requist RSS Feed" />
+                <elementDefinition Id="3d78340a-b0ea-4bd2-9939-716dcd9a1e4f" />
+              </controlFlow>
+              <controlFlow Id="8a48154c-0437-4d97-a9a8-136fc031fe60" isLeaf="false">
+                <opaqueActionMoniker Id="442e0054-3cc7-4c7b-aaa4-5539f8cd7be0" LastKnownName="Requist REST Feed" />
+                <elementDefinition Id="f69422de-e927-4e19-b1de-7dfeddf056d7" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <activityFinalNode Id="7483e201-0ef6-4973-be6d-ccf8b9b115a1" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="d033abe8-cd0d-4cd3-8be6-2fadfe527126" />
+          </activityFinalNode>
+          <opaqueAction Id="6f42600b-ae46-4259-b669-ea91d16f5f61" name="Requist RSS Feed" isLeaf="false">
+            <elementDefinition Id="360fe21e-af22-4530-b839-5483b992cbd2" />
+            <flowNodeTargets>
+              <controlFlow Id="1642bc5e-e7c2-4cc0-8aa2-a47ad7badeb1" isLeaf="false">
+                <opaqueActionMoniker Id="f2ca70f0-064a-4c95-88a6-8c040a0a7de3" LastKnownName="Get Requested Data" />
+                <elementDefinition Id="ad59b4e9-8f0d-4bc3-aec3-7fbb893ef463" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="442e0054-3cc7-4c7b-aaa4-5539f8cd7be0" name="Requist REST Feed" isLeaf="false">
+            <elementDefinition Id="6790dae0-4426-4c92-93ae-0f3f8b9aebec" />
+            <flowNodeTargets>
+              <controlFlow Id="a6d95ec5-e075-4e5e-82f4-b1985c1959c8" isLeaf="false">
+                <opaqueActionMoniker Id="f2ca70f0-064a-4c95-88a6-8c040a0a7de3" LastKnownName="Get Requested Data" />
+                <elementDefinition Id="62e8ec38-d7a1-4a27-a933-c300eafa07fe" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="f2ca70f0-064a-4c95-88a6-8c040a0a7de3" name="Get Requested Data" isLeaf="false">
+            <elementDefinition Id="cab38ade-7079-4312-b6ae-05bee3c5d729" />
+            <flowNodeTargets>
+              <controlFlow Id="aa72a2f8-285b-4910-b5de-dc2db409df6d" isLeaf="false">
+                <activityFinalNodeMoniker Id="7483e201-0ef6-4973-be6d-ccf8b9b115a1" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="21d8691b-5706-4804-8c0a-423a4cc8d963" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="45281c02-a574-49bb-9dfe-b0c73290e0c6" name="DragonNews.Model">
+    <elementDefinition Id="75972046-b2e8-49ba-86d5-fc14214732e5" />
+  </package>
+</activityRootModel>

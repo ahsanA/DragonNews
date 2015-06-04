@@ -30,6 +30,13 @@
       <SubType>Content</SubType>
       <DependentUpon>DragonNews.activitydiagram</DependentUpon>
     </Content>
+    <Content Include="Feed.activitydiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Feed.activitydiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Feed.activitydiagram</DependentUpon>
+    </Content>
     <Content Include="ModelDefinition\DragonNews.Model.uml">
       <SubType>Content</SubType>
     </Content>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner"
   dslVersion="1.0.0.0"
   Id="75972046-b2e8-49ba-86d5-fc14214732e5"
   name="DragonNews.Model" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -17,28 +17,309 @@
         name="StandardProfileL3" />
     </packageHasProfileInstances>
   </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <activity
+        Id="80a39479-46d3-4b17-b3b0-3914375ef216"
+        name="DragonNews"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <initialNode
+            Id="2a2e2829-0ebc-4b4f-ba0e-513e2fe22465"
+            name="Initial1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="fde3ed03-d6fa-4776-81db-332f89aadeba"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="70fffe70-99e7-4ab9-af25-edf88098d9a7"
+                  LastKnownName="View All News"
+                  LastKnownLocation="DragonNews.Model.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <activityFinalNode
+            Id="2f83a988-4b06-438b-bf5d-7ac05e516dff"
+            name="ActivityFinal1"
+            isLeaf="false" />
+          <opaqueAction
+            Id="70fffe70-99e7-4ab9-af25-edf88098d9a7"
+            name="View All News"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="a8829af7-81d4-4375-b0a4-5534fa55e89f"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="0eb0ac8b-dad1-4e02-b14d-fd7b7a4a3e13"
+                  LastKnownName="View Detaid News"
+                  LastKnownLocation="DragonNews.Model.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="6ab11d1e-4885-47bc-bd09-1a933cf17fd8"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="c8ae848a-7b3d-4bdd-a554-c02a7b3c2913"
+                  LastKnownName="Sign In"
+                  LastKnownLocation="DragonNews.Model.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="48843c91-d8a9-44e8-93b3-33dc57f41691"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="9e689fff-5534-4f86-9c9a-113b6b4adfbf"
+                  LastKnownName="Sign Up"
+                  LastKnownLocation="DragonNews.Model.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="0eb0ac8b-dad1-4e02-b14d-fd7b7a4a3e13"
+            name="View Detaid News"
+            isLeaf="false" />
+          <opaqueAction
+            Id="c8ae848a-7b3d-4bdd-a554-c02a7b3c2913"
+            name="Sign In"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="3ad89b60-38ff-48bf-9806-f5583b29d704"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="b8dba2e9-6fa6-444b-9c07-85a57dfe5ddd"
+                  LastKnownName="View All News Added by the user"
+                  LastKnownLocation="DragonNews.Model.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="9e689fff-5534-4f86-9c9a-113b6b4adfbf"
+            name="Sign Up"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="ee2fa2d1-9e0e-45c2-bfea-e9f2f8e80034"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="c8ae848a-7b3d-4bdd-a554-c02a7b3c2913"
+                  LastKnownName="Sign In"
+                  LastKnownLocation="DragonNews.Model.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="2b8a4722-59ef-412e-bb3e-fadc5a6b9350"
+            name="Add News"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="d7594b4a-0635-4b07-84b0-b3e2d3d9a52a"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="74dba593-6a5a-437e-a3a1-4a58c24f9de2"
+                  LastKnownName="Sign Out"
+                  LastKnownLocation="DragonNews.Model.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="525445f9-10c5-4be5-9338-8726fd64bebe"
+            name="Edit News"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="5cf9d3d8-19ca-46d7-81e2-75a311dea972"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="74dba593-6a5a-437e-a3a1-4a58c24f9de2"
+                  LastKnownName="Sign Out"
+                  LastKnownLocation="DragonNews.Model.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="4f9e063e-a5de-4488-a886-4851dbc76705"
+            name="Delete News"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="86d7807e-792a-4a39-a2b2-fc684a0ffb25"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="74dba593-6a5a-437e-a3a1-4a58c24f9de2"
+                  LastKnownName="Sign Out"
+                  LastKnownLocation="DragonNews.Model.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="b8dba2e9-6fa6-444b-9c07-85a57dfe5ddd"
+            name="View All News Added by the user"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="978a1912-f225-4c26-a2e8-cac681440ee0"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="2b8a4722-59ef-412e-bb3e-fadc5a6b9350"
+                  LastKnownName="Add News"
+                  LastKnownLocation="DragonNews.Model.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="1670cf00-2119-42dd-ba4b-f6a90bddef0b"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="525445f9-10c5-4be5-9338-8726fd64bebe"
+                  LastKnownName="Edit News"
+                  LastKnownLocation="DragonNews.Model.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="9b3543c4-0f06-4011-83fd-22d1ef17970b"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="4f9e063e-a5de-4488-a886-4851dbc76705"
+                  LastKnownName="Delete News"
+                  LastKnownLocation="DragonNews.Model.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="6354fbf3-a9bd-4e1d-b0ef-f3f097cf1566"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="0eb0ac8b-dad1-4e02-b14d-fd7b7a4a3e13"
+                  LastKnownName="View Detaid News"
+                  LastKnownLocation="DragonNews.Model.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="74dba593-6a5a-437e-a3a1-4a58c24f9de2"
+            name="Sign Out"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="b4667f88-65d1-46c8-b802-b0190e05cd44"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="2f83a988-4b06-438b-bf5d-7ac05e516dff"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="DragonNews.Model.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+        </nodes>
+      </activity>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <activity
+        Id="1a973441-cb12-4610-9ca8-439be1321480"
+        name="Feed"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <initialNode
+            Id="e05edc76-656c-4037-bc0b-fe6e968bb948"
+            name="Initial1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="3d78340a-b0ea-4bd2-9939-716dcd9a1e4f"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="360fe21e-af22-4530-b839-5483b992cbd2"
+                  LastKnownName="Requist RSS Feed"
+                  LastKnownLocation="DragonNews.Model.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="f69422de-e927-4e19-b1de-7dfeddf056d7"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="6790dae0-4426-4c92-93ae-0f3f8b9aebec"
+                  LastKnownName="Requist REST Feed"
+                  LastKnownLocation="DragonNews.Model.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <activityFinalNode
+            Id="d033abe8-cd0d-4cd3-8be6-2fadfe527126"
+            name="ActivityFinal1"
+            isLeaf="false" />
+          <opaqueAction
+            Id="360fe21e-af22-4530-b839-5483b992cbd2"
+            name="Requist RSS Feed"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="ad59b4e9-8f0d-4bc3-aec3-7fbb893ef463"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="cab38ade-7079-4312-b6ae-05bee3c5d729"
+                  LastKnownName="Get Requested Data"
+                  LastKnownLocation="DragonNews.Model.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="6790dae0-4426-4c92-93ae-0f3f8b9aebec"
+            name="Requist REST Feed"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="62e8ec38-d7a1-4a27-a933-c300eafa07fe"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="cab38ade-7079-4312-b6ae-05bee3c5d729"
+                  LastKnownName="Get Requested Data"
+                  LastKnownLocation="DragonNews.Model.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="cab38ade-7079-4312-b6ae-05bee3c5d729"
+            name="Get Requested Data"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="21d8691b-5706-4804-8c0a-423a4cc8d963"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="d033abe8-cd0d-4cd3-8be6-2fadfe527126"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="DragonNews.Model.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+        </nodes>
+      </activity>
+    </packageHasNamedElement>
+  </packagedElements>
   <primitiveType
     Id="220a3521-e091-4221-bae9-3ef9018e845c"
     name="Integer"
     isAbstract="false"
-    isTemplate="false"
     isLeaf="false" />
   <primitiveType
     Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
     name="Boolean"
     isAbstract="false"
-    isTemplate="false"
     isLeaf="false" />
   <primitiveType
     Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
     name="String"
     isAbstract="false"
-    isTemplate="false"
     isLeaf="false" />
   <primitiveType
     Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
     name="UnlimitedNatural"
     isAbstract="false"
-    isTemplate="false"
     isLeaf="false" />
 </modelStoreModel>
