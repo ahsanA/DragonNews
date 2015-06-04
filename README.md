@@ -16,6 +16,22 @@ Assignment For Crossover Tech Trial
     find 'data source=DRAGON' change 'DRAGON' with <your_host_name>
     find 'user id=sa' change 'sa' with <the_user_who_can_access_the_database>
     find 'password=123' change '123' with <that_users_password>
+
+
+-Steps to prepare the solution:
+--------------------------------
+    1. just run the .sln file of 
+        DragonNews folder's to see the web part, and
+        DragonNewsService folder's to run the service.
+    
+    [Note: while running the service 'http://localhost:54249/' appiar on browser which gives an error: HTTP Error 403.14 - Forbidden. This is odd and I tried to solve the problem but couldn't. My bad. apolizies]
+    
+    2. service end point 
+        for rss:
+            http://localhost:54249/news/rss?category=sports
+        for rest:
+            http://localhost:54249/news/rest/category/sports
+        
     
 
 
