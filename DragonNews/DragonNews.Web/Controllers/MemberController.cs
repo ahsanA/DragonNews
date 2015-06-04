@@ -19,7 +19,24 @@ namespace DragonNews.Web.Controllers
         [HttpPost]
         public ActionResult SignUp(MemberViewModel model)
         {
-            return View();
+
+            if (model.Password == model.ConfirmPassword)
+            {
+                if (!model.IsEmailAddressExits())
+                {
+                    model.SignUp();
+                    return RedirectToAction("SignIn");
+                }
+                else
+                {
+                    ModelState.AddModelError("Email","This Email is already Registered");
+                }                
+            }
+            else
+            {
+                ModelState.AddModelError("ConfirmPassword", "Password And Confirm Password Do Not Same");
+            }
+            return View(model);
         }
 
         public ActionResult SignIn()

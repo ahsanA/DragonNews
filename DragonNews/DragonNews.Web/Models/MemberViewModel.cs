@@ -30,7 +30,7 @@ namespace DragonNews.Web.Models
             _service = NinjectWebCommon.GetConcreteInstance<IMemberService>(); ;
         }
 
-        public void Add()
+        public void SignUp()
         {
             try
             {
@@ -45,6 +45,11 @@ namespace DragonNews.Web.Models
             {
                 throw ex;
             }
+        }
+
+        public bool IsEmailAddressExits()
+        {
+            return _service.IsMemberExits(Email);
         }
 
         public bool SignIn(string email, string givenPass)

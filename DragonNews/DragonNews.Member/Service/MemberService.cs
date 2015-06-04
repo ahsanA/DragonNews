@@ -39,7 +39,7 @@ namespace DragonNews.Member
             return _memberRepository.IsMemberExits(email);
         }
 
-        Member ValidMember(string email, string givenPass)
+        public Member ValidMember(string email, string givenPass)
         {
             var user = _memberRepository.GetMember(email);
             var realPass = _passwordManager.GetPassword(user.Password, user.Salt);
