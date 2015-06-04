@@ -89,9 +89,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\RSSFeeder\RSSFeeder.csproj">
+    <ProjectReference Include="..\RSSFeeder\Feeder.csproj">
       <Project>{223940db-7ff2-49a7-946c-68c99f8e7b72}</Project>
-      <Name>RSSFeeder</Name>
+      <Name>Feeder</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

@@ -5,9 +5,9 @@ VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragonNews.News", "DragonNews.News\DragonNews.News.csproj", "{B1AFB155-EA02-422F-894D-C34A174EEC9C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RSSFeeder", "RSSFeeder\RSSFeeder.csproj", "{223940DB-7FF2-49A7-946C-68C99F8E7B72}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Feeder", "RSSFeeder\Feeder.csproj", "{223940DB-7FF2-49A7-946C-68C99F8E7B72}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RSSFeederWeb", "RSSFeederWeb\RSSFeederWeb.csproj", "{5F25133C-F4FC-44A1-9D7C-8F9D7DF0B692}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FeederWeb", "RSSFeederWeb\FeederWeb.csproj", "{5F25133C-F4FC-44A1-9D7C-8F9D7DF0B692}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
