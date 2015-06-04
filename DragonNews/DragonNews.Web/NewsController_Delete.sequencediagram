@@ -106,14 +106,14 @@
               <lifelineMoniker Id="cca13156-a968-4ea5-b2ec-c40cf8f646cf" LastKnownName="NinjectWebCommon" />
             </covered>
           </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="9033b583-6f37-4dd6-b19a-15cdefaf0fc0" name="MessageOccurrenceSpecification">
-            <covered>
-              <lifelineMoniker Id="cc29b27e-4632-4785-8d20-a1a52c9242c0" LastKnownName="newsModel : NewsViewModel" />
-            </covered>
-          </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="2bb07194-9f80-4ac3-ba65-bc9ca78cb691" name="MessageOccurrenceSpecification">
             <covered>
               <lifelineMoniker Id="cca13156-a968-4ea5-b2ec-c40cf8f646cf" LastKnownName="NinjectWebCommon" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="9033b583-6f37-4dd6-b19a-15cdefaf0fc0" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="cc29b27e-4632-4785-8d20-a1a52c9242c0" LastKnownName="newsModel : NewsViewModel" />
             </covered>
           </messageOccurrenceSpecification>
           <combinedFragment Id="7c551a41-4a8d-400a-a81a-430c53a6fe6d" name="CombinedFragment1" interactionOperator="Opt" customInteractionOperator="If">
@@ -177,14 +177,14 @@
               <lifelineMoniker Id="cca13156-a968-4ea5-b2ec-c40cf8f646cf" LastKnownName="NinjectWebCommon" />
             </covered>
           </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="c8be86bd-4e93-4bec-b60f-94322ffb50d0" name="MessageOccurrenceSpecification">
-            <covered>
-              <lifelineMoniker Id="1a5e2e03-cd8b-4342-ba9a-48b953b10d01" LastKnownName="this : NewsController" />
-            </covered>
-          </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="540dbba8-5e53-4041-81ad-4a1307fa26c4" name="MessageOccurrenceSpecification">
             <covered>
               <lifelineMoniker Id="cc29b27e-4632-4785-8d20-a1a52c9242c0" LastKnownName="newsModel : NewsViewModel" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="c8be86bd-4e93-4bec-b60f-94322ffb50d0" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="1a5e2e03-cd8b-4342-ba9a-48b953b10d01" LastKnownName="this : NewsController" />
             </covered>
           </messageOccurrenceSpecification>
           <executionOccurrenceSpecification Id="7887ea75-f511-49df-b01f-75fea86f2e32" name="ExecutionOccurrenceSpecification">
@@ -269,14 +269,14 @@
               <lifelineMoniker Id="cc29b27e-4632-4785-8d20-a1a52c9242c0" LastKnownName="newsModel : NewsViewModel" />
             </covered>
           </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="d8d50da2-92a1-4acf-a19e-0c8806489614" name="MessageOccurrenceSpecification">
-            <covered>
-              <lifelineMoniker Id="ecb8fe5e-b35a-4198-82c7-ed04afe2245a" LastKnownName="instance : INewsService" />
-            </covered>
-          </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="6dcaada0-9d5d-4b44-aa9c-359a595be32d" name="MessageOccurrenceSpecification">
             <covered>
               <lifelineMoniker Id="cc29b27e-4632-4785-8d20-a1a52c9242c0" LastKnownName="newsModel : NewsViewModel" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="d8d50da2-92a1-4acf-a19e-0c8806489614" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="ecb8fe5e-b35a-4198-82c7-ed04afe2245a" LastKnownName="instance : INewsService" />
             </covered>
           </messageOccurrenceSpecification>
           <executionOccurrenceSpecification Id="44b8aba3-deda-47ec-a564-39d86d27c874" name="ExecutionOccurrenceSpecification">
