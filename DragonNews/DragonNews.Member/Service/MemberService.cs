@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Ninject;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,17 +12,27 @@ namespace DragonNews.Member
         private PasswordManager _passwordManager;
         private IMemberRepository _memberRepository;
 
+        [Inject]
         public MemberService(IMemberRepository memberRepository)
         {
             _passwordManager = new PasswordManager();
-            memberRepository = _memberRepository;
+            _memberRepository = memberRepository;
         }
 
         public void AddMember(Member member)
         {
-            member.Salt = _passwordManager.GenerateSalt();
-            member.Password = _passwordManager.SetPassword(member.Password, member.Salt);            
-            _memberRepository.AddMember(member);
+            try
+            {
+                member.Salt = _passwordManager.GenerateSalt();
+                member.Password = _passwordManager.SetPassword(member.Password, member.Salt);
+                _memberRepository.AddMember(member);
+                _memberRepository.Save();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            
         }
 
         public Member GetMember(Guid id)
