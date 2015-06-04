@@ -36,7 +36,7 @@ namespace DragonNews.Web.Controllers
         public ActionResult Create(NewsViewModel model)
         {
             model.Add();
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("MyNews", "News", new { userID = UserSession.CurrentUser.ID });
         }
 
         public ActionResult Details(Guid id)
@@ -57,7 +57,7 @@ namespace DragonNews.Web.Controllers
         public ActionResult Edit(NewsViewModel model)
         {
             model.Edit();
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("MyNews", "News", new { userID = UserSession.CurrentUser.ID });
         }
 
         public ActionResult Delete(Guid id)
@@ -65,7 +65,7 @@ namespace DragonNews.Web.Controllers
             var newsModel = new NewsViewModel();
             newsModel.Id = id;
             newsModel.Delete();
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("MyNews", "News", new { userID = UserSession.CurrentUser.ID });
         }
 
     }
