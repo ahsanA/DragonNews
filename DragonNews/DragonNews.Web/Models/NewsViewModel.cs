@@ -95,5 +95,19 @@ namespace DragonNews.Web.Models
             return allNewsModel;
         }
 
+
+        internal List<NewsViewModel> GetAllNewsByUserID(Guid userID)
+        {
+            var allNews = _newsService.GetAllNewsByUserID(userID);
+            List<NewsViewModel> allNewsModel = new List<NewsViewModel>();
+            Mapper.CreateMap<News.News, NewsViewModel>();
+            foreach (var news in allNews)
+            {
+                var newsModel = new NewsViewModel();
+                newsModel = Mapper.Map<News.News, NewsViewModel>(news);
+                allNewsModel.Add(newsModel);
+            }
+            return allNewsModel;
+        }
     }
 }

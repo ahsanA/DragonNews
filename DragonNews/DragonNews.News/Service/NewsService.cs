@@ -43,5 +43,11 @@ namespace DragonNews.News
         {
             return _newsRepository.GetAllNews().ToList();
         }
+
+
+        public List<News> GetAllNewsByUserID(Guid userID)
+        {
+            return _newsRepository.GetAllNewsByUserID(userID).ToList();
+        }
     }
 }

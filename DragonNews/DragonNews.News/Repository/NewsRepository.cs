@@ -68,5 +68,11 @@ namespace DragonNews.News
             GC.SuppressFinalize(this);
         }
         #endregion
+
+
+        public IEnumerable<News> GetAllNewsByUserID(Guid userID)
+        {
+            return context.News.Where(i=>i.UserID == userID).ToList();
+        }
     }
 }

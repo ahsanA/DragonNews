@@ -13,5 +13,6 @@ namespace DragonNews.News
         News DetailNews(Guid id);
         void DeleteNews(Guid id);
         List<News> GetAllNews();
+        List<News> GetAllNewsByUserID(Guid userID);
     }
 }

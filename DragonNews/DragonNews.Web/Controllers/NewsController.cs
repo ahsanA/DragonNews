@@ -22,7 +22,8 @@ namespace DragonNews.Web.Controllers
         // GET: News
         public ActionResult MyNews(Guid userID)
         {
-            return View();
+            var newsModel = new NewsViewModel();
+            return View(newsModel.GetAllNewsByUserID(userID));
         }
 
         public ActionResult Create()

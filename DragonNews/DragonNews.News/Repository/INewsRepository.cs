@@ -14,5 +14,6 @@ namespace DragonNews.News
         void DeleteNews(Guid id);
         IEnumerable<News> GetAllNews();
         void Save();
+        IEnumerable<News> GetAllNewsByUserID(Guid userID);
     }
 }
