@@ -49,7 +49,7 @@
             </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", "News", new { id = item.Id }, null) |
-                @Html.ActionLink("Details", "Details", "Home", new { id = item.Id }, null) |
+                @Html.ActionLink("Details", "Details", "Home", new { id = item.Id }, new { target = "_blank" }) |
                 @Html.ActionLink("Delete", "Delete", "News", new { id = item.Id }, null)
             </td>
         </tr>
