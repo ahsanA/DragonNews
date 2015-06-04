@@ -32,7 +32,7 @@ namespace RSSFeeder
             foreach (var news in allNews)
             {
                 SyndicationItem item = new SyndicationItem(
-                                                    category,
+                                                    news.Title,
                                                   news.Details,
                                                     new Uri("http://localhost:47201/Home/Details/" + news.ID),
                                                     news.ID.ToString(),

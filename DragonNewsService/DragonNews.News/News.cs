@@ -19,5 +19,6 @@ namespace DragonNews.News
         public string Details { get; set; }
         public System.DateTime CreateDate { get; set; }
         public System.Guid UserID { get; set; }
+        public string Title { get; set; }
     }
 }
