@@ -165,6 +165,7 @@
     <Content Include="NewsController_Delete.sequencediagram" />
     <Content Include="MemberController_SignUp.sequencediagram" />
     <Content Include="MemberController_SignIn.sequencediagram" />
+    <Content Include="MemberController_SignOut.sequencediagram" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -224,6 +225,9 @@
   <ItemGroup>
     <EmbeddedResource Include="MemberController_SignIn.sequencediagram.layout">
       <DependentUpon>MemberController_SignIn.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemberController_SignOut.sequencediagram.layout">
+      <DependentUpon>MemberController_SignOut.sequencediagram</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MemberController_SignUp.sequencediagram.layout">
       <DependentUpon>MemberController_SignUp.sequencediagram</DependentUpon>
