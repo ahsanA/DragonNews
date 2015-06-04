@@ -41,29 +41,31 @@ namespace DragonNews.Web.Controllers
 
         public ActionResult SignIn()
         {
-            return View(new { email="", pass=""});
+            SignInViewModel model = new SignInViewModel();
+            return View(new { model });
         }
 
         [HttpPost]
-        public ActionResult SignIn(string email, string pass)
+        public ActionResult SignIn(SignInViewModel model)
         {
-            MemberViewModel model = new MemberViewModel();
-
-            if (model.SignIn(email, pass))
+            if (model.SignIn())
             {
-                FormsAuthentication.SetAuthCookie(UserSession.CurrentUser.Name,true);
+                FormsAuthentication.SetAuthCookie(UserSession.CurrentUser.Name, true);
                 return RedirectToAction("MyNews", "News", new { userID = UserSession.CurrentUser.ID });
             }
+            else
+            {
+                ModelState.AddModelError("Password", "Email or Password is not corruct!!!");
+            }
 
-            return View(new { email = email, pass = pass });
+            return View(model);
         }
 
         public ActionResult SignOut()
         {
             FormsAuthentication.SignOut();
             UserSession.Clear();
-            return RedirectToAction("UserLogin", "Annonymous");
-            return View();
+            return RedirectToAction("Index", "Home");
         }
     }
 }

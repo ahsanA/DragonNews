@@ -50,27 +50,6 @@ namespace DragonNews.Web.Models
         public bool IsEmailAddressExits()
         {
             return _service.IsMemberExits(Email);
-        }
-
-        public bool SignIn(string email, string givenPass)
-        {
-            var realUser = _service.ValidMember(email, givenPass);
-            if (realUser != null)
-            {
-                var sessionUser = new SessionUser()
-                {
-                    Email = realUser.Email,
-                    Name = realUser.Name,
-                    ID = realUser.ID,
-                };
-
-                UserSession.User = sessionUser;
-                UserSession.AddToCookie(sessionUser);
-
-                return true;
-            }
-            else
-                return false;
-        }
+        }        
     }
 }
