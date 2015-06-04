@@ -8,19 +8,19 @@ namespace DragonNews.Member
 {
     class MemberService : IMemberService
     {
-        private PasswordManager passwordManager;
+        private PasswordManager _passwordManager;
         private IMemberRepository _memberRepository;
 
         public MemberService(IMemberRepository memberRepository)
         {
-            passwordManager = new PasswordManager();
+            _passwordManager = new PasswordManager();
             memberRepository = _memberRepository;
         }
 
         public void AddMember(Member member)
         {
-            member.Salt = passwordManager.GenerateSalt();
-            member.Password = passwordManager.SetPassword(member.Password, member.Salt);
+            member.Salt = _passwordManager.GenerateSalt();
+            member.Password = _passwordManager.SetPassword(member.Password, member.Salt);
             member.ID = Guid.NewGuid();
             _memberRepository.AddMember(member);
         }
@@ -38,6 +38,13 @@ namespace DragonNews.Member
         public bool IsMemberExits(string email)
         {
             return _memberRepository.IsMemberExits(email);
+        }
+
+        public bool IsPasswordMatched(string email, string givenPass)
+        {
+            var user = _memberRepository.GetMember(email);
+            var realPass = _passwordManager.GetPassword(user.Password, user.Salt);
+            return givenPass == realPass;
         }
     }
 }
