@@ -159,6 +159,12 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ConnectionString.config" />
+    <Content Include="NewsController_Create.sequencediagram" />
+    <Content Include="NewsController_MyNews.sequencediagram" />
+    <Content Include="NewsController_Edit.sequencediagram" />
+    <Content Include="NewsController_Delete.sequencediagram" />
+    <Content Include="MemberController_SignUp.sequencediagram" />
+    <Content Include="MemberController_SignIn.sequencediagram" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -214,6 +220,26 @@
       <Project>{571bf710-1c44-4ed5-989a-67622fbc6390}</Project>
       <Name>DragonNews.News</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MemberController_SignIn.sequencediagram.layout">
+      <DependentUpon>MemberController_SignIn.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemberController_SignUp.sequencediagram.layout">
+      <DependentUpon>MemberController_SignUp.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewsController_Create.sequencediagram.layout">
+      <DependentUpon>NewsController_Create.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewsController_Delete.sequencediagram.layout">
+      <DependentUpon>NewsController_Delete.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewsController_Edit.sequencediagram.layout">
+      <DependentUpon>NewsController_Edit.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewsController_MyNews.sequencediagram.layout">
+      <DependentUpon>NewsController_MyNews.sequencediagram</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
