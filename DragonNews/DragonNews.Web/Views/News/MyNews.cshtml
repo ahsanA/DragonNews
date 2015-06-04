@@ -13,11 +13,11 @@
  Page Size:
 <nav>
     <ul class="pagination">
-        <li><a href="/News/MyHews?userID = @UserSession.CurrentUser.ID&pageSize=5">5</a></li>
-        <li><a href="/News/MyHews?userID = @UserSession.CurrentUser.ID&pageSize=10">10</a></li>
-        <li><a href="/News/MyHews?userID = @UserSession.CurrentUser.ID&pageSize=20">20</a></li>
-        <li><a href="/News/MyHews?userID = @UserSession.CurrentUser.ID&pageSize=50">50</a></li>
-        <li><a href="/News/MyHews?userID = @UserSession.CurrentUser.ID&pageSize=100">100</a></li>
+        <li><a href="/News/MyNews?userID=@UserSession.CurrentUser.ID&pageSize=5">5</a></li>
+        <li><a href="/News/MyNews?userID=@UserSession.CurrentUser.ID&pageSize=10">10</a></li>
+        <li><a href="/News/MyNews?userID=@UserSession.CurrentUser.ID&pageSize=20">20</a></li>
+        <li><a href="/News/MyNews?userID=@UserSession.CurrentUser.ID&pageSize=50">50</a></li>
+        <li><a href="/News/MyNews?userID=@UserSession.CurrentUser.ID&pageSize=100">100</a></li>
     </ul>
 </nav>
 <table class="table">
@@ -61,7 +61,7 @@ Page Number:
     <ul class="pagination">
         @for (int i = 1; i <= Convert.ToInt32(ViewData["PageCount"]); i++)
         {
-            <li><a href="/News/MyHews?userID = @UserSession.CurrentUser.ID&pageSize=@ViewData["PageSize"]&pagenumber=@i">@i</a></li>
+            <li><a href="/News/MyNews?userID=@UserSession.CurrentUser.ID&pageSize=@ViewData["PageSize"]&pagenumber=@i">@i</a></li>
         }
     </ul>
 </nav>

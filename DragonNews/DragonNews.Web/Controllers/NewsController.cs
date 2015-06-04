@@ -26,7 +26,7 @@ namespace DragonNews.Web.Controllers
             var newsModel = new NewsViewModel();
             int total;
             var data = newsModel.GetAllNewsByUserID(userID, pageSize, pageNumber, out total);
-            ViewData["PageNumber"] = Math.Ceiling((double)total / pageSize.Value);
+            ViewData["PageCount"] = Math.Ceiling((double)total / pageSize.Value);
             ViewData["PageSize"] = pageSize.Value;
             return View(data);
         }
