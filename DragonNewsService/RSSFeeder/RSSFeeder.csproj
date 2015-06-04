@@ -52,12 +52,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="News_Rss_3.sequencediagram" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DragonNews.News\DragonNews.News.csproj">
       <Project>{b1afb155-ea02-422f-894d-c34a174eec9c}</Project>
       <Name>DragonNews.News</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="News_Rss_3.sequencediagram.layout">
+      <DependentUpon>News_Rss_3.sequencediagram</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

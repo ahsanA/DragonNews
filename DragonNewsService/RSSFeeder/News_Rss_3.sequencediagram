@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" dslVersion="1.0.0.0" Id="f594c166-13f1-4652-a2bf-61a16a881974" name="News_Rss" mode="DotNet" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
+  <packagedElements>
+    <packageHasNamedElement>
+      <interaction Id="81dd2cdf-190d-4bcc-8b50-9887b7bef68c" name="News_Rss" collapseFragmentsFlag="false" isActiveClass="false" isAbstract="false" isLeaf="false" isReentrant="false">
+        <fragments>
+          <behaviorExecutionSpecification Id="2b615135-321a-4ca8-8771-003410ac830f" name="BehaviorExecutionSpecification">
+            <coveredLifelines>
+              <lifelineMoniker Id="5355659b-6517-420f-88c1-f32cb276ca76" LastKnownName="this : News" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker Id="6727ccc7-a2e8-419d-96ed-2197d15ea2b3" LastKnownName="ExecutionOccurrenceSpecification" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker Id="fbb6ec86-c9ca-45da-82fb-13b78a01ac93" LastKnownName="ExecutionOccurrenceSpecification" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker Id="c183aee9-a13f-4168-a27f-b206c6a33e48" LastKnownName="MessageOccurrenceSpecification" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification Id="fbb6ec86-c9ca-45da-82fb-13b78a01ac93" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="c4005da8-5bce-4836-8b75-7f7d00696e37" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="5355659b-6517-420f-88c1-f32cb276ca76" LastKnownName="this : News" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <lostFoundTarget Id="e79cee45-80b1-4791-91ac-6e9919636ba6" name="LostFoundTarget" />
+          <messageOccurrenceSpecification Id="c183aee9-a13f-4168-a27f-b206c6a33e48" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="5355659b-6517-420f-88c1-f32cb276ca76" LastKnownName="this : News" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification Id="6727ccc7-a2e8-419d-96ed-2197d15ea2b3" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="b8f40431-a5d5-40ae-abfb-4a4ea4bd351a" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="5355659b-6517-420f-88c1-f32cb276ca76" LastKnownName="this : News" />
+            </covered>
+          </executionOccurrenceSpecification>
+        </fragments>
+        <lifelines>
+          <lifeline Id="5355659b-6517-420f-88c1-f32cb276ca76" name="this : News" isActor="false" lifelineDisplayName="this : News" referencedInstance="(Assembly=$(223940db-7ff2-49a7-946c-68c99f8e7b72.OutputPathUri) Namespace=RSSFeeder Type=News ObjectInstance=&quot;Object instance 2&quot;)" referencedType="RSSFeeder‎.News">
+            <referencesInternal>
+              <reference Id="fbc0a805-707e-4624-8e2c-194eacbb4b5b" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=RSSFeeder)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(223940db-7ff2-49a7-946c-68c99f8e7b72.OutputPathUri)&amp;quot; Namespace=RSSFeeder Type=News)&quot;)" tag="DGQL" />
+              <reference Id="fe31ef0a-b3f3-4bc8-8155-fae947d1dc2f" handle="(Assembly=&quot;$(223940db-7ff2-49a7-946c-68c99f8e7b72.OutputPathUri)&quot; Namespace=RSSFeeder Type=News)" tag="DGML" />
+            </referencesInternal>
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker Id="fbb6ec86-c9ca-45da-82fb-13b78a01ac93" LastKnownName="ExecutionOccurrenceSpecification" />
+              <executionOccurrenceSpecificationMoniker Id="6727ccc7-a2e8-419d-96ed-2197d15ea2b3" LastKnownName="ExecutionOccurrenceSpecification" />
+            </topLevelOccurrences>
+          </lifeline>
+        </lifelines>
+        <messages>
+          <message Id="bdd1f6ae-7d7c-4f52-ae0c-c9e914c83658" name="Rss" messageKind="Found" messageSort="AsynchCall" createSelfMessage="false">
+            <referencesInternal>
+              <reference Id="ebe79009-0c74-46b4-a984-fde99a19fad5" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=RSSFeeder)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(223940db-7ff2-49a7-946c-68c99f8e7b72.OutputPathUri)&amp;quot; Namespace=RSSFeeder Type=News)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(223940db-7ff2-49a7-946c-68c99f8e7b72.OutputPathUri)&amp;quot; Namespace=RSSFeeder Type=News Member=(Name=Rss OverloadingParameters=[(Assembly=&amp;quot;$(FxReferenceAssembliesUri)/.NETFramework/v4.5/mscorlib.dll&amp;quot; Namespace=System Type=String)]))&quot;)" tag="DGQL" />
+              <reference Id="f2806dd7-941b-4b44-ad32-a20fd36102c9" handle="(Assembly=&quot;$(223940db-7ff2-49a7-946c-68c99f8e7b72.OutputPathUri)&quot; Namespace=RSSFeeder Type=News Member=(Name=Rss OverloadingParameters=[(Assembly=&quot;$(FxReferenceAssembliesUri)/.NETFramework/v4.5/mscorlib.dll&quot; Namespace=System Type=String)]))" tag="DGML" />
+            </referencesInternal>
+            <sendEvent>
+              <lostFoundTargetMoniker Id="e79cee45-80b1-4791-91ac-6e9919636ba6" LastKnownName="LostFoundTarget" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker Id="c183aee9-a13f-4168-a27f-b206c6a33e48" LastKnownName="MessageOccurrenceSpecification" />
+            </receiveEvent>
+          </message>
+        </messages>
+      </interaction>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="c4005da8-5bce-4836-8b75-7f7d00696e37" name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="b8f40431-a5d5-40ae-abfb-4a4ea4bd351a" name="ExecutionEvent" />
+    </packageHasNamedElement>
+  </packagedElements>
+</SequenceDesignerModel>
