@@ -8,12 +8,12 @@ namespace DragonNews.News
 {
     public interface INewsRepository : IDisposable
     {
-        void AddNews(News news);
-        void EditNews(News news);
-        News DetailNews(Guid id);
+        void AddNews(DragonNews.DataAccess.News news);
+        void EditNews(DragonNews.DataAccess.News news);
+        DragonNews.DataAccess.News DetailNews(Guid id);
         void DeleteNews(Guid id);
-        IEnumerable<News> GetAllNews();
+        IEnumerable<DragonNews.DataAccess.News> GetAllNews();
         void Save();
-        IEnumerable<News> GetAllNewsByUserID(Guid userID);
+        IEnumerable<DragonNews.DataAccess.News> GetAllNewsByUserID(Guid userID);
     }
 }

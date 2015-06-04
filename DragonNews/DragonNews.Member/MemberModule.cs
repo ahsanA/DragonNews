@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DragonNews.Member
+namespace DragonNewsModule.Member
 {
     public class MemberModule : NinjectModule
     {

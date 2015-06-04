@@ -16,19 +16,19 @@ namespace DragonNews.News
         {
             _newsRepository = newsRepository;
         }
-        public void AddNews(News news)
+        public void AddNews(DragonNews.DataAccess.News news)
         {
             _newsRepository.AddNews(news);
             _newsRepository.Save();
         }
 
-        public void EditNews(News news)
+        public void EditNews(DragonNews.DataAccess.News news)
         {
             _newsRepository.EditNews(news);
             _newsRepository.Save();
         }
 
-        public News DetailNews(Guid id)
+        public DragonNews.DataAccess.News DetailNews(Guid id)
         {
             return _newsRepository.DetailNews(id);
         }
@@ -39,13 +39,13 @@ namespace DragonNews.News
             _newsRepository.Save();
         }
 
-        public List<News> GetAllNews()
+        public List<DragonNews.DataAccess.News> GetAllNews()
         {
             return _newsRepository.GetAllNews().ToList();
         }
 
 
-        public List<News> GetAllNewsByUserID(Guid userID)
+        public List<DragonNews.DataAccess.News> GetAllNewsByUserID(Guid userID)
         {
             return _newsRepository.GetAllNewsByUserID(userID).ToList();
         }

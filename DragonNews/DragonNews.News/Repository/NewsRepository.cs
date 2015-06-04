@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DragonNews.DataAccess;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -10,35 +11,35 @@ namespace DragonNews.News
     class NewsRepository : INewsRepository
     {
 
-        private DragonNewsNewsEntity context;
+        private DragonNewsEntities context;
 
-        public NewsRepository(DragonNewsNewsEntity context)
+        public NewsRepository(DragonNewsEntities context)
         {
             this.context = context;
         }
 
-        public void AddNews(News news)
+        public void AddNews(DragonNews.DataAccess.News news)
         {
             context.News.Add(news);
         }
 
-        public void EditNews(News news)
+        public void EditNews(DragonNews.DataAccess.News news)
         {
             context.Entry(news).State = EntityState.Modified;
         }
 
-        public News DetailNews(Guid id)
+        public DragonNews.DataAccess.News DetailNews(Guid id)
         {
             return context.News.Find(id);
         }
 
         public void DeleteNews(Guid id)
         {
-            News news = context.News.Find(id);
+            DragonNews.DataAccess.News news = context.News.Find(id);
             context.News.Remove(news);
         }
 
-        public IEnumerable<News> GetAllNews()
+        public IEnumerable<DragonNews.DataAccess.News> GetAllNews()
         {
             return context.News.ToList();
         }
@@ -70,7 +71,7 @@ namespace DragonNews.News
         #endregion
 
 
-        public IEnumerable<News> GetAllNewsByUserID(Guid userID)
+        public IEnumerable<DragonNews.DataAccess.News> GetAllNewsByUserID(Guid userID)
         {
             return context.News.Where(i=>i.UserID == userID).ToList();
         }

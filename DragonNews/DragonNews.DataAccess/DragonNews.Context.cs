@@ -7,16 +7,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DragonNews.News
+namespace DragonNews.DataAccess
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class DragonNewsNewsEntity : DbContext
+    public partial class DragonNewsEntities : DbContext
     {
-        public DragonNewsNewsEntity()
-            : base("name=DragonNewsNewsEntity")
+        public DragonNewsEntities()
+            : base("name=DragonNewsEntities")
         {
         }
     
@@ -25,6 +25,7 @@ namespace DragonNews.News
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Member> Members { get; set; }
         public virtual DbSet<News> News { get; set; }
     }
 }

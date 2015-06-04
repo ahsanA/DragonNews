@@ -1,10 +1,11 @@
-﻿using System;
+﻿using DragonNews.DataAccess;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DragonNews.Member
+namespace DragonNewsModule.Member
 {
     class MemberReposiotry : IMemberRepository
     {
@@ -15,15 +16,15 @@ namespace DragonNews.Member
             this.context = context;
         }
 
-        public void AddMember(Member member)
+        public void AddMember(DragonNews.DataAccess.Member member)
         {
             context.Members.Add(member);
         }
-        public Member GetMember(Guid id)
+        public DragonNews.DataAccess.Member GetMember(Guid id)
         {
             return context.Members.Find(id);
         }
-        public Member GetMember(string email)
+        public DragonNews.DataAccess.Member GetMember(string email)
         {
             return context.Members.Where(e => e.Email == email).SingleOrDefault();
         }

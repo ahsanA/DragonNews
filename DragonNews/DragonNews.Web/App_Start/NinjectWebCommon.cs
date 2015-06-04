@@ -12,7 +12,7 @@ namespace DragonNews.Web.App_Start
     using Ninject.Web.Common;
     using Ninject.Modules;
     using DragonNews.News;
-    using DragonNews.Member;
+    using DragonNewsModule.Member;
 
     public static class NinjectWebCommon 
     {

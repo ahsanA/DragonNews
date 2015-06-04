@@ -7,18 +7,19 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DragonNews.Member
+namespace DragonNews.DataAccess
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Member
+    public partial class News
     {
         public System.Guid ID { get; set; }
-        public string Name { get; set; }
-        public string Email { get; set; }
-        public string Password { get; set; }
-        public string Salt { get; set; }
+        public int Category { get; set; }
+        public string Details { get; set; }
         public System.DateTime CreateDate { get; set; }
+        public System.Guid UserID { get; set; }
+    
+        public virtual Member Member { get; set; }
     }
 }

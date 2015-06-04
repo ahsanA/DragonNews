@@ -8,11 +8,11 @@ namespace DragonNews.News
 {
     public interface INewsService
     {
-        void AddNews(News news);
-        void EditNews(News news);
-        News DetailNews(Guid id);
+        void AddNews(DragonNews.DataAccess.News news);
+        void EditNews(DragonNews.DataAccess.News news);
+        DragonNews.DataAccess.News DetailNews(Guid id);
         void DeleteNews(Guid id);
-        List<News> GetAllNews();
-        List<News> GetAllNewsByUserID(Guid userID);
+        List<DragonNews.DataAccess.News> GetAllNews();
+        List<DragonNews.DataAccess.News> GetAllNewsByUserID(Guid userID);
     }
 }

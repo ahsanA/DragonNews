@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DragonNews.DataAccess;
 
-namespace DragonNews.Member
+namespace DragonNewsModule.Member
 {
     public interface IMemberRepository
     {
-        void AddMember(Member member);
-        Member GetMember(Guid id);
-        Member GetMember(string email);
+        void AddMember(DragonNews.DataAccess.Member member);
+        DragonNews.DataAccess.Member GetMember(Guid id);
+        DragonNews.DataAccess.Member GetMember(string email);
         bool IsMemberExits(string email);
         void Save();
     }

@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using DragonNews.Member;
+using DragonNewsModule.Member;
 using DragonNews.Web.App_Start;
 using Ninject;
 using System;
@@ -41,9 +41,9 @@ namespace DragonNews.Web.Models
         {
             try
             {
-                var member = new Member.Member();
-                Mapper.CreateMap<MemberViewModel, Member.Member>();
-                member = Mapper.Map<MemberViewModel, Member.Member>(this);
+                var member = new DragonNews.DataAccess.Member();
+                Mapper.CreateMap<MemberViewModel, DragonNews.DataAccess.Member>();
+                member = Mapper.Map<MemberViewModel, DragonNews.DataAccess.Member>(this);
                 member.ID = Guid.NewGuid();
                 member.CreateDate = DateTime.UtcNow;
                 _service.AddMember(member);

@@ -1,4 +1,4 @@
-﻿using DragonNews.Member;
+﻿using DragonNewsModule.Member;
 using DragonNews.Web.App_Start;
 using System;
 using System.Collections.Generic;

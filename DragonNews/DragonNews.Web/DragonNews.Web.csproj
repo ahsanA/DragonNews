@@ -158,6 +158,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="ConnectionString.config" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -201,6 +202,10 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DragonNews.DataAccess\DragonNews.DataAccess.csproj">
+      <Project>{aa0b3087-0872-46a6-a42c-894b7a9ee9aa}</Project>
+      <Name>DragonNews.DataAccess</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DragonNews.Member\DragonNews.Member.csproj">
       <Project>{ac98de25-2f1b-438e-a246-21e051fdd491}</Project>
       <Name>DragonNews.Member</Name>

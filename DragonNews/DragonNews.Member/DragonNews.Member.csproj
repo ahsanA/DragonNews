@@ -52,24 +52,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Helper\PasswordManager.cs" />
-    <Compile Include="Member.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Member.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Member.cs">
-      <DependentUpon>Member.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Member.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Member.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Member1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Member.tt</DependentUpon>
-    </Compile>
     <Compile Include="MemberModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\IMemberRepository.cs" />
@@ -78,30 +60,17 @@
     <Compile Include="Service\MemberService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EntityDeploy Include="Member.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Member.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="App.Config" />
-    <None Include="Member.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Member.edmx</DependentUpon>
-      <LastGenOutput>Member.Context.cs</LastGenOutput>
-    </None>
-    <None Include="Member.edmx.diagram">
-      <DependentUpon>Member.edmx</DependentUpon>
-    </None>
-    <None Include="Member.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Member.edmx</DependentUpon>
-      <LastGenOutput>Member1.cs</LastGenOutput>
-    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DragonNews.DataAccess\DragonNews.DataAccess.csproj">
+      <Project>{aa0b3087-0872-46a6-a42c-894b7a9ee9aa}</Project>
+      <Name>DragonNews.DataAccess</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DragonNews.Member
+namespace DragonNewsModule.Member
 {
     class MemberService : IMemberService
     {
@@ -19,7 +19,7 @@ namespace DragonNews.Member
             _memberRepository = memberRepository;
         }
 
-        public void AddMember(Member member)
+        public void AddMember(DragonNews.DataAccess.Member member)
         {
             try
             {
@@ -35,12 +35,12 @@ namespace DragonNews.Member
             
         }
 
-        public Member GetMember(Guid id)
+        public DragonNews.DataAccess.Member GetMember(Guid id)
         {
             return _memberRepository.GetMember(id);
         }
 
-        public Member GetMember(string email)
+        public DragonNews.DataAccess.Member GetMember(string email)
         {
             return _memberRepository.GetMember(email);
         }
@@ -50,7 +50,7 @@ namespace DragonNews.Member
             return _memberRepository.IsMemberExits(email);
         }
 
-        public Member ValidMember(string email, string givenPass)
+        public DragonNews.DataAccess.Member ValidMember(string email, string givenPass)
         {
             var user = _memberRepository.GetMember(email);
             var realPass = _passwordManager.GetPassword(user.Password, user.Salt);

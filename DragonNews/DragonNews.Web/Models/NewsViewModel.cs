@@ -37,9 +37,9 @@ namespace DragonNews.Web.Models
         {
             try
             {
-                var news = new News.News();
-                Mapper.CreateMap<NewsViewModel, News.News>();
-                news = Mapper.Map<NewsViewModel, News.News>(this);
+                var news = new DragonNews.DataAccess.News();
+                Mapper.CreateMap<NewsViewModel, DragonNews.DataAccess.News>();
+                news = Mapper.Map<NewsViewModel, DragonNews.DataAccess.News>(this);
                 news.CreateDate = DateTime.UtcNow;
                 news.ID = Guid.NewGuid();
                 news.UserID = UserSession.CurrentUser.ID;
@@ -57,8 +57,8 @@ namespace DragonNews.Web.Models
             var news = _newsService.DetailNews(Id);
 
             var newsModel = new NewsViewModel();
-            Mapper.CreateMap<News.News, NewsViewModel>();
-            newsModel = Mapper.Map<News.News, NewsViewModel>(news);
+            Mapper.CreateMap<DragonNews.DataAccess.News, NewsViewModel>();
+            newsModel = Mapper.Map<DragonNews.DataAccess.News, NewsViewModel>(news);
 
             return newsModel;
         }
@@ -68,9 +68,9 @@ namespace DragonNews.Web.Models
         {
             try
             {
-                var news = new News.News();
-                Mapper.CreateMap<NewsViewModel, News.News>();
-                news = Mapper.Map<NewsViewModel, News.News>(this);
+                var news = new DragonNews.DataAccess.News();
+                Mapper.CreateMap<NewsViewModel, DragonNews.DataAccess.News>();
+                news = Mapper.Map<NewsViewModel, DragonNews.DataAccess.News>(this);
                 _newsService.EditNews(news);
             }
             catch (Exception ex)
@@ -88,11 +88,11 @@ namespace DragonNews.Web.Models
         {
             var allNews =  _newsService.GetAllNews();
             List<NewsViewModel> allNewsModel = new List<NewsViewModel>();
-            Mapper.CreateMap<News.News, NewsViewModel>();
+            Mapper.CreateMap<DragonNews.DataAccess.News, NewsViewModel>();
             foreach (var news in allNews)
             {
                 var newsModel = new NewsViewModel();
-                newsModel = Mapper.Map<News.News, NewsViewModel>(news);
+                newsModel = Mapper.Map<DragonNews.DataAccess.News, NewsViewModel>(news);
                 allNewsModel.Add(newsModel);
             }
             return allNewsModel;
@@ -103,11 +103,11 @@ namespace DragonNews.Web.Models
         {
             var allNews = _newsService.GetAllNewsByUserID(userID);
             List<NewsViewModel> allNewsModel = new List<NewsViewModel>();
-            Mapper.CreateMap<News.News, NewsViewModel>();
+            Mapper.CreateMap<DragonNews.DataAccess.News, NewsViewModel>();
             foreach (var news in allNews)
             {
                 var newsModel = new NewsViewModel();
-                newsModel = Mapper.Map<News.News, NewsViewModel>(news);
+                newsModel = Mapper.Map<DragonNews.DataAccess.News, NewsViewModel>(news);
                 allNewsModel.Add(newsModel);
             }
             return allNewsModel;
