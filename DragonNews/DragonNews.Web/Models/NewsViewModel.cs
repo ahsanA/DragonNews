@@ -22,6 +22,7 @@ namespace DragonNews.Web.Models
         public DateTime CreateDate { get; set; }
         public Guid UserID { get; set; }
 
+
         INewsService _newsService;
 
         [Inject]
@@ -86,9 +87,9 @@ namespace DragonNews.Web.Models
             _newsService.DeleteNews(Id);
         }
 
-        public List<NewsViewModel> GetAllNews()
+        public List<NewsViewModel> GetAllNews(int? pageSize, int? pageNumber,out int total)
         {
-            var allNews =  _newsService.GetAllNews();
+            var allNews =  _newsService.GetAllNews(pageSize,pageNumber,out total);
             List<NewsViewModel> allNewsModel = new List<NewsViewModel>();
             Mapper.CreateMap<DragonNews.DataAccess.News, NewsViewModel>();
             foreach (var news in allNews)
@@ -101,9 +102,9 @@ namespace DragonNews.Web.Models
         }
 
 
-        internal List<NewsViewModel> GetAllNewsByUserID(Guid userID)
+        internal List<NewsViewModel> GetAllNewsByUserID(Guid userID,int? pageSize, int? pageNumber,out int total)
         {
-            var allNews = _newsService.GetAllNewsByUserID(userID);
+            var allNews = _newsService.GetAllNewsByUserID(userID, pageSize, pageNumber, out total);
             List<NewsViewModel> allNewsModel = new List<NewsViewModel>();
             Mapper.CreateMap<DragonNews.DataAccess.News, NewsViewModel>();
             foreach (var news in allNews)

@@ -19,10 +19,15 @@ namespace DragonNews.Web.Controllers
             _newsService = newsService;
         }
         // GET: Home
-        public ActionResult Index()
+        public ActionResult Index(int? pageSize=10, int? pageNumber=1)
         {
+           
             var newsModel = new NewsViewModel();
-            return View(newsModel.GetAllNews());
+            int total;
+            var data = newsModel.GetAllNews(pageSize, pageNumber,out total);
+            ViewData["PageCount"] = Math.Ceiling((double)total / pageSize.Value);
+            ViewData["PageSize"] = pageSize.Value;
+            return View(data);
         }
 
         public ActionResult Details(Guid id)

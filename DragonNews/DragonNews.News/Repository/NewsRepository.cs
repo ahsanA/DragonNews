@@ -42,7 +42,7 @@ namespace DragonNews.News
         public IEnumerable<DragonNews.DataAccess.News> GetAllNews(int? pageSize, int? pageNumber, out int total)
         {            
             total =  context.News.Count();
-            return context.News.Skip((pageNumber.Value-1) * pageSize.Value).Take(pageSize.Value);
+            return context.News.OrderByDescending(x=>x.CreateDate).Skip((pageNumber.Value-1) * pageSize.Value).Take(pageSize.Value);
         }
 
         public void Save()
@@ -75,7 +75,7 @@ namespace DragonNews.News
         public IEnumerable<DragonNews.DataAccess.News> GetAllNewsByUserID(Guid userID, int? pageSize, int? pageNumber, out int total)
         {
             total = context.News.Where(i => i.UserID == userID).Count();
-            return context.News.Where(i => i.UserID == userID).Skip((pageNumber.Value - 1) * pageSize.Value).Take(pageSize.Value);
+            return context.News.Where(i => i.UserID == userID).OrderByDescending(x => x.CreateDate).Skip((pageNumber.Value - 1) * pageSize.Value).Take(pageSize.Value);
         }
     }
 }

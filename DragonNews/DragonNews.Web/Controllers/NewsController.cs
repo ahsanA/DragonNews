@@ -21,10 +21,14 @@ namespace DragonNews.Web.Controllers
         }
 
         // GET: News
-        public ActionResult MyNews(Guid userID)
+        public ActionResult MyNews(Guid userID, int? pageSize = 10, int? pageNumber = 1)
         {
             var newsModel = new NewsViewModel();
-            return View(newsModel.GetAllNewsByUserID(userID));
+            int total;
+            var data = newsModel.GetAllNewsByUserID(userID, pageSize, pageNumber, out total);
+            ViewData["PageNumber"] = Math.Ceiling((double)total / pageSize.Value);
+            ViewData["PageSize"] = pageSize.Value;
+            return View(data);
         }
 
         public ActionResult Create()

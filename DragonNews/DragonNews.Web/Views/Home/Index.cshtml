@@ -5,12 +5,20 @@
 }
 
 <h2>Home</h2>
-
-
+ Page Size:
+<nav>   
+    <ul class="pagination">
+        <li><a href="/Home/Index?pageSize=5">5</a></li>
+        <li><a href="/Home/Index?pageSize=10">10</a></li>
+        <li><a href="/Home/Index?pageSize=20">20</a></li>
+        <li><a href="/Home/Index?pageSize=50">50</a></li>
+        <li><a href="/Home/Index?pageSize=100">100</a></li>
+    </ul>
+</nav>
 <table class="table">
     <tr>
         <th>
-           Category
+            Category
         </th>
         <th>
             Title
@@ -21,22 +29,32 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-           @{var category = (DragonNews.News.NewsCategory)item.Category;}
-            @category
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Title)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Details)
-        </td>
-        <td>
-            @Html.ActionLink("Details", "Details", "Home", new { id = item.Id },null)
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @{var category = (DragonNews.News.NewsCategory)item.Category;}
+                @category
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Details)
+            </td>
+            <td>
+                @Html.ActionLink("Details", "Details", "Home", new { id = item.Id }, null)
+            </td>
+        </tr>
+    }
 
 </table>
+Page Number:
+<nav>    
+    <ul class="pagination">
+        @for (int i = 1; i <= Convert.ToInt32(ViewData["PageCount"]); i++)
+        {
+            <li><a href="/Home/Index?pageSize=@ViewData["PageSize"]&pagenumber=@i">@i</a></li>
+        }
+    </ul>
+</nav>
