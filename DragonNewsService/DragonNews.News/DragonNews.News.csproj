@@ -82,6 +82,7 @@
       <LastGenOutput>News.Designer.cs</LastGenOutput>
     </EntityDeploy>
     <None Include="App.Config" />
+    <None Include="ConnectionString.config" />
     <None Include="News.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>News.edmx</DependentUpon>
