@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragonNews.News", "DragonNe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragonNews.DataAccess", "DragonNews.DataAccess\DragonNews.DataAccess.csproj", "{AA0B3087-0872-46A6-A42C-894B7A9EE9AA}"
 EndProject
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "DragonNews.Model", "DragonNews.Model\DragonNews.Model.modelproj", "{2B8D8C93-89A2-4517-91AF-19EB8B6E5760}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{AA0B3087-0872-46A6-A42C-894B7A9EE9AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AA0B3087-0872-46A6-A42C-894B7A9EE9AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AA0B3087-0872-46A6-A42C-894B7A9EE9AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B8D8C93-89A2-4517-91AF-19EB8B6E5760}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B8D8C93-89A2-4517-91AF-19EB8B6E5760}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B8D8C93-89A2-4517-91AF-19EB8B6E5760}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B8D8C93-89A2-4517-91AF-19EB8B6E5760}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
