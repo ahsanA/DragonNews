@@ -9,6 +9,7 @@ using System.Web.Mvc;
 
 namespace DragonNews.Web.Controllers
 {
+    [Authorized]
     public class NewsController : Controller
     {
         INewsService _newsService;
