@@ -11,7 +11,8 @@ namespace DragonNews.Member
     {
         public override void Load()
         {
-            
+            Bind<IMemberService>().To<MemberService>();
+            Bind<IMemberRepository>().To<MemberReposiotry>();
         }
     }
 }
