@@ -39,15 +39,15 @@ namespace DragonNews.News
             _newsRepository.Save();
         }
 
-        public List<DragonNews.DataAccess.News> GetAllNews()
+        public List<DragonNews.DataAccess.News> GetAllNews(int? pageSize, int? pageNumber, out int total)
         {
-            return _newsRepository.GetAllNews().ToList();
+            return _newsRepository.GetAllNews(pageSize, pageNumber,out total).ToList();
         }
 
 
-        public List<DragonNews.DataAccess.News> GetAllNewsByUserID(Guid userID)
+        public List<DragonNews.DataAccess.News> GetAllNewsByUserID(Guid userID, int? pageSize, int? pageNumber, out int total)
         {
-            return _newsRepository.GetAllNewsByUserID(userID).ToList();
+            return _newsRepository.GetAllNewsByUserID(userID, pageSize, pageNumber, out total).ToList();
         }
     }
 }

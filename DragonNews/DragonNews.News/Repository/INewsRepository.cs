@@ -12,8 +12,8 @@ namespace DragonNews.News
         void EditNews(DragonNews.DataAccess.News news);
         DragonNews.DataAccess.News DetailNews(Guid id);
         void DeleteNews(Guid id);
-        IEnumerable<DragonNews.DataAccess.News> GetAllNews();
+        IEnumerable<DragonNews.DataAccess.News> GetAllNews(int? pageSize, int?pageNumber, out int total);
         void Save();
-        IEnumerable<DragonNews.DataAccess.News> GetAllNewsByUserID(Guid userID);
+        IEnumerable<DragonNews.DataAccess.News> GetAllNewsByUserID(Guid userID, int? pageSize, int? pageNumber, out int total);
     }
 }

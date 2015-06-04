@@ -15,7 +15,7 @@ Assignment For Crossover Tech Trial
     4. find change the following things
         find 'data source=DRAGON' change 'DRAGON' with <your_host_name>
         find 'user id=sa' change 'sa' with <the_user_who_can_access_the_database>
-        find 'password=123' change '123' with <that_users_password>
+        find 'password=123' change '123' with <that_user's_password>
 
 
 -Steps to prepare the solution:
@@ -24,7 +24,8 @@ Assignment For Crossover Tech Trial
         DragonNews folder's to see the web part, and
         DragonNewsService folder's to run the service.
     
-    [Note: while running the service 'http://localhost:54249/' appiar on browser which gives an error: HTTP Error 403.14 - Forbidden. This is odd and I tried to solve the problem but couldn't. My bad. apolizies]
+    [Note: while running the service 'http://localhost:54249/' appear on browser which gives an error: HTTP Error 403.14 - Forbidden. 
+	This is odd and I tried to solve the problem but couldn't. My bad. apologies]
     
     2. service end point 
         for rss:

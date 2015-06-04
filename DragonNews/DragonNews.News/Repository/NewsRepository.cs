@@ -39,9 +39,10 @@ namespace DragonNews.News
             context.News.Remove(news);
         }
 
-        public IEnumerable<DragonNews.DataAccess.News> GetAllNews()
-        {
-            return context.News.ToList();
+        public IEnumerable<DragonNews.DataAccess.News> GetAllNews(int? pageSize, int? pageNumber, out int total)
+        {            
+            total =  context.News.Count();
+            return context.News.Skip((pageNumber.Value-1) * pageSize.Value).Take(pageSize.Value);
         }
 
         public void Save()
@@ -71,9 +72,10 @@ namespace DragonNews.News
         #endregion
 
 
-        public IEnumerable<DragonNews.DataAccess.News> GetAllNewsByUserID(Guid userID)
+        public IEnumerable<DragonNews.DataAccess.News> GetAllNewsByUserID(Guid userID, int? pageSize, int? pageNumber, out int total)
         {
-            return context.News.Where(i=>i.UserID == userID).ToList();
+            total = context.News.Where(i => i.UserID == userID).Count();
+            return context.News.Where(i => i.UserID == userID).Skip((pageNumber.Value - 1) * pageSize.Value).Take(pageSize.Value);
         }
     }
 }
