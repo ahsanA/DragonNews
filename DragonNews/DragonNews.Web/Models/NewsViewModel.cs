@@ -16,6 +16,8 @@ namespace DragonNews.Web.Models
         public int Category { get; set; }
         [Required]
         public string Details { get; set; }
+        [Required]
+        public string Title { get; set; }
         public Guid Id { get; set; }
         public DateTime CreateDate { get; set; }
         public Guid UserID { get; set; }

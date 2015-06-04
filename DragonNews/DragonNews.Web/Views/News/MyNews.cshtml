@@ -15,6 +15,9 @@
             @Html.DisplayNameFor(model => model.Category)
         </th>
         <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.Details)
         </th>
         <th></th>
@@ -26,6 +29,9 @@
             <td>
                 @{var category = (DragonNews.News.NewsCategory)item.Category;}
                 @category
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Details)

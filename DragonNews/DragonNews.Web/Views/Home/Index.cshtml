@@ -13,6 +13,9 @@
            Category
         </th>
         <th>
+            Title
+        </th>
+        <th>
             Details
         </th>
         <th></th>
@@ -23,6 +26,9 @@
         <td>
            @{var category = (DragonNews.News.NewsCategory)item.Category;}
             @category
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Details)
