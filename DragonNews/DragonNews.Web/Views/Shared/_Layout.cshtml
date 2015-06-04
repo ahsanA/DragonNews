@@ -20,7 +20,15 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("My News", "MyNews", "News", new{userID = "3F2504E0-4F89-41D3-9A0C-0305E82C3301"}, null)</li>
+                    @if (UserSession.CurrentUser != null)
+                    {
+                        <li>@Html.ActionLink("My News", "MyNews", "News", new { userID = UserSession.CurrentUser.ID }, null)</li>
+                    }
+                    else
+                    {
+                        <li><a href="/Member/SignIn">Sign In</a></li>
+                        <li><a href="/Member/SignUp">Sign Up</a></li>
+                    }
                 </ul>
             </div>
         </div>

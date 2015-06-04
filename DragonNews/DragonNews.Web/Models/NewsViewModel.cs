@@ -39,7 +39,7 @@ namespace DragonNews.Web.Models
                 news = Mapper.Map<NewsViewModel, News.News>(this);
                 news.CreateDate = DateTime.UtcNow;
                 news.ID = Guid.NewGuid();
-                news.UserID = new Guid("3F2504E0-4F89-41D3-9A0C-0305E82C3301");
+                news.UserID = UserSession.CurrentUser.ID;
                 _newsService.AddNews(news);
             }
             catch (Exception ex)

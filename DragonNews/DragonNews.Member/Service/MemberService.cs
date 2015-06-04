@@ -20,8 +20,7 @@ namespace DragonNews.Member
         public void AddMember(Member member)
         {
             member.Salt = _passwordManager.GenerateSalt();
-            member.Password = _passwordManager.SetPassword(member.Password, member.Salt);
-            member.ID = Guid.NewGuid();
+            member.Password = _passwordManager.SetPassword(member.Password, member.Salt);            
             _memberRepository.AddMember(member);
         }
 
@@ -40,11 +39,14 @@ namespace DragonNews.Member
             return _memberRepository.IsMemberExits(email);
         }
 
-        public bool IsPasswordMatched(string email, string givenPass)
+        Member ValidMember(string email, string givenPass)
         {
             var user = _memberRepository.GetMember(email);
             var realPass = _passwordManager.GetPassword(user.Password, user.Salt);
-            return givenPass == realPass;
+            if (givenPass == realPass)
+                return user;
+            else
+                return null;
         }
     }
 }

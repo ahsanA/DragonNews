@@ -12,6 +12,6 @@ namespace DragonNews.Member
         Member GetMember(Guid id);
         Member GetMember(string email);
         bool IsMemberExits(string email);
-        bool IsPasswordMatched(string email, string realPass);
+        Member ValidMember(string email, string realPass);
     }
 }
