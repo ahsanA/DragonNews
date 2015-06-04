@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="News_Rest.sequencediagram" />
     <None Include="News_Rss_3.sequencediagram" />
   </ItemGroup>
   <ItemGroup>
@@ -61,6 +62,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="News_Rest.sequencediagram.layout">
+      <DependentUpon>News_Rest.sequencediagram</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="News_Rss_3.sequencediagram.layout">
       <DependentUpon>News_Rss_3.sequencediagram</DependentUpon>
     </EmbeddedResource>

@@ -59,7 +59,14 @@
                 @Html.DisplayFor(modelItem => item.Title)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Details)
+               @try
+               {
+                @item.Details.Substring(0, 150) <span>...</span>
+               }
+               catch (Exception ex)
+               {
+                @item.Details
+               }            
             </td>
             <td>
                 @Html.ActionLink("Details", "Details", "Home", new { id = item.Id }, new { target="_blank"})
