@@ -38,14 +38,7 @@ namespace DragonNews.Web.Controllers
         {
             model.Add();
             return RedirectToAction("MyNews", "News", new { userID = UserSession.CurrentUser.ID });
-        }
-
-        public ActionResult Details(Guid id)
-        {
-            var newsModel = new NewsViewModel();
-            newsModel.Id = id;
-            return View(newsModel.Detail());
-        }
+        }        
 
         public ActionResult Edit(Guid id)
         {

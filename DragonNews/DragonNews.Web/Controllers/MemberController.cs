@@ -11,7 +11,7 @@ namespace DragonNews.Web.Controllers
     public class MemberController : Controller
     {
         // GET: Member
-        public ActionResult SignUp() 
+        public ActionResult SignUp()
         {
             return View();
         }
@@ -19,22 +19,24 @@ namespace DragonNews.Web.Controllers
         [HttpPost]
         public ActionResult SignUp(MemberViewModel model)
         {
-
-            if (model.Password == model.ConfirmPassword)
+            if (ModelState.IsValid)
             {
-                if (!model.IsEmailAddressExits())
+                if (model.Password == model.ConfirmPassword)
                 {
-                    model.SignUp();
-                    return RedirectToAction("SignIn");
+                    if (!model.IsEmailAddressExits())
+                    {
+                        model.SignUp();
+                        return RedirectToAction("SignIn");
+                    }
+                    else
+                    {
+                        ModelState.AddModelError("Email", "This Email is already Registered");
+                    }
                 }
                 else
                 {
-                    ModelState.AddModelError("Email","This Email is already Registered");
-                }                
-            }
-            else
-            {
-                ModelState.AddModelError("ConfirmPassword", "Password And Confirm Password Do Not Same");
+                    ModelState.AddModelError("ConfirmPassword", "Password And Confirm Password Do Not Same");
+                }
             }
             return View(model);
         }
@@ -42,22 +44,24 @@ namespace DragonNews.Web.Controllers
         public ActionResult SignIn()
         {
             SignInViewModel model = new SignInViewModel();
-            return View(new { model });
+            return View(model);
         }
 
         [HttpPost]
         public ActionResult SignIn(SignInViewModel model)
         {
-            if (model.SignIn())
+            if (ModelState.IsValid)
             {
-                FormsAuthentication.SetAuthCookie(UserSession.CurrentUser.Name, true);
-                return RedirectToAction("MyNews", "News", new { userID = UserSession.CurrentUser.ID });
+                if (model.SignIn())
+                {
+                    FormsAuthentication.SetAuthCookie(UserSession.CurrentUser.Name, true);
+                    return RedirectToAction("MyNews", "News", new { userID = UserSession.CurrentUser.ID });
+                }
+                else
+                {
+                    ModelState.AddModelError("Password", "Email or Password is not corruct!!!");
+                }
             }
-            else
-            {
-                ModelState.AddModelError("Password", "Email or Password is not corruct!!!");
-            }
-
             return View(model);
         }
 

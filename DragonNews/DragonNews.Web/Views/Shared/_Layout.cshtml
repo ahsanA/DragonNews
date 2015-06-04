@@ -22,6 +22,8 @@
                 <ul class="nav navbar-nav">
                     @if (UserSession.CurrentUser != null)
                     {
+                        <li><a href="javascript:void(0)">Welcome @UserSession.CurrentUser.Name !!!</a></li>
+                        <li>||</li>
                         <li>@Html.ActionLink("My News", "MyNews", "News", new { userID = UserSession.CurrentUser.ID }, null)</li>
                         <li><a href="/Member/SignOut">Sign Out</a></li>
                     }

@@ -34,7 +34,7 @@ namespace RSSFeeder
                 SyndicationItem item = new SyndicationItem(
                                                     category,
                                                   news.Details,
-                                                    new Uri("http://localhost:47201/News/Details/" + news.ID),
+                                                    new Uri("http://localhost:47201/Home/Details/" + news.ID),
                                                     news.ID.ToString(),
                                                     news.CreateDate);
                 items.Add(item);

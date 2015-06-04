@@ -4,10 +4,9 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<h2>News > Details</h2>
 
 <div>
-    <h4>NewsViewModel</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -15,7 +14,8 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Category)
+            @{var category = (DragonNews.News.NewsCategory)Model.Category;}
+            @category
         </dd>
 
         <dt>
@@ -31,15 +31,20 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.CreateDate)       
+            @Html.DisplayFor(model => model.CreateDate)
         </dd>
 
-        
+
 
     </dl>
 </div>
 <p>
-    @*@Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Delete", "Delete", new { id = Model.Id }) |*@
-    @Html.ActionLink("Back to List", "Index", "Home")
+    @if (UserSession.CurrentUser != null)
+    {
+        @Html.ActionLink("Back to List", "MyNews", "News", new { userID = UserSession.CurrentUser.ID }, null)
+    }
+    else
+    {
+        @Html.ActionLink("Back to List", "Index", "Home")
+    }
 </p>

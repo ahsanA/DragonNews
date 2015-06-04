@@ -24,5 +24,12 @@ namespace DragonNews.Web.Controllers
             var newsModel = new NewsViewModel();
             return View(newsModel.GetAllNews());
         }
+
+        public ActionResult Details(Guid id)
+        {
+            var newsModel = new NewsViewModel();
+            newsModel.Id = id;
+            return View(newsModel.Detail());
+        }
     }
 }
