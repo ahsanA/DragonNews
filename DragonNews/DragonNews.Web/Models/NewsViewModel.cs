@@ -6,12 +6,15 @@ using System.Linq;
 using System.Web;
 using AutoMapper;
 using DragonNews.Web.App_Start;
+using System.ComponentModel.DataAnnotations;
 
 namespace DragonNews.Web.Models
 {
     public class NewsViewModel
     {
+        [Required]
         public int Category { get; set; }
+        [Required]
         public string Details { get; set; }
         public Guid Id { get; set; }
         public DateTime CreateDate { get; set; }

@@ -23,6 +23,7 @@
                     @if (UserSession.CurrentUser != null)
                     {
                         <li>@Html.ActionLink("My News", "MyNews", "News", new { userID = UserSession.CurrentUser.ID }, null)</li>
+                        <li><a href="/Member/SignOut">Sign Out</a></li>
                     }
                     else
                     {
