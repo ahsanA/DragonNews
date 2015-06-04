@@ -33,7 +33,11 @@ Assignment For Crossover Tech Trial
         for rest:
             http://localhost:54249/news/rest/category/sports
         
-    
+-assumed feature that are not in the requirment:
+-------------------------------------------------
+	1. pagination in the list pages
 
-
+-feedback:
+-----------
+very good approach to test a candidate. To me this is the best approach. It would be very nice if I can hear back from you about the assesment made after reviewing the full project and the documentation. It will help me to build my future career. regards.
 
