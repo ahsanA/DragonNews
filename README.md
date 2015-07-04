@@ -1,4 +1,4 @@
-# DragonNews
+Dragon News
 Assignment For Crossover Tech Trial
 
 - Steps To Create and Initialize Database:
@@ -20,14 +20,18 @@ Assignment For Crossover Tech Trial
 
 -Steps to prepare the solution:
 --------------------------------
-    1. just run the .sln file of 
+	1. In Visual Studio check the both options: 
+				1. Allow NuGet to Download missing packages, and 
+				2. Automatically check for missing packages during build  in visual studio
+			at Tools > Options > NuGet Package Manager
+    2. just run the .sln file of 
         DragonNews folder's to see the web part, and
         DragonNewsService folder's to run the service.
     
     [Note: while running the service 'http://localhost:54249/' appear on browser which gives an error: HTTP Error 403.14 - Forbidden. 
 	This is odd and I tried to solve the problem but couldn't. My bad. apologies]
     
-    2. service end point 
+    3. service end point 
         for rss:
             http://localhost:54249/news/rss?category=sports
         for rest:
